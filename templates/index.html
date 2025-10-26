@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block titulo %}Departamentos de Guatemala{% endblock %}
+
+{% block contenido %}
+<h1>Listado de Departamentos</h1>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Población</th>
+            <th>Tipo de poblaci&oacute;n</th>
+        </tr>
+        {% for depto in deptos %}
+        <tr {% if depto.poblacion > 1000000 %}class="verde"{%endif%}>
+            <td>{{ depto.nombre }}</td>
+            <td>{{ "{:,}".format(depto.poblacion) }}</td>
+            <td>{% if depto.poblacion > 1000000 %}ALTA{% else %}BAJA{% endif %}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

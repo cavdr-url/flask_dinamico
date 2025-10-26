@@ -1,0 +1,6 @@
+body { font-family: Arial; margin: 20px; }
+        nav { background: #333; padding: 10px; }
+        nav a { color: white; margin: 0 10px; text-decoration: none; }
+        .container { margin-top: 20px; }
+        footer { margin-top: 50px; text-align: center; color: #666; }
+        .verde { color: green; }

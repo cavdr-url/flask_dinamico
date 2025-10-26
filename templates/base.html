@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}Mi App FLask{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+ <nav>
+        <a href="/">Inicio</a>
+        <a href="/">Departamentos</a>
+    </nav>
+    <div class="container">
+        {% block contenido %}
+        {% endblock %}
+    </div>
+    <footer>© 2025 Profesorado de Tecnología</footer>
+</body>
+</html>
